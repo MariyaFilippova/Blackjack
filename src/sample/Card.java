@@ -8,7 +8,7 @@ public class Card {
     Image picture;
 
     enum Suit {
-        HEARTS("hearts"), DIAMONDS("diamonds"), CLUBS("clubs"), SPADES("spades");
+        HEARTS("h"), DIAMONDS("d"), CLUBS("c"), SPADES("s");
         final String value;
         Suit(String suit) {
             value = suit;
@@ -16,16 +16,18 @@ public class Card {
     }
 
     enum Type {
-        TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6), SEVEN(7),
-        EIGHT(8), NINE(9), JACK(10), QUEEN(10), KING(10), ACE(11);
+        TWO(2, "2"), THREE(3, "3"), FOUR(4, "4"), FIVE(5, "5"), SIX(6, "6"), SEVEN(7, "7"),
+        EIGHT(8, "8"), NINE(9, "9"), JACK(10, "j"), QUEEN(10, "q"), KING(10, "k"), ACE(11, "a");
         final int value;
-        Type (int x) {
+        final String type;
+        Type (int x, String y) {
             value = x;
+            type = y;
         }
     }
 
     static public String getImagePath(Suit suit, Type type) {
-        return "/Users/mariafilippova/Java/Blackjack/src/resources" + suit.value + type.value;
+        return "/Users/mariafilippova/Java/Blackjack/src/resources" + type.type + suit.value;
     }
 
     Card(Suit suit, Type type, Image image) {
