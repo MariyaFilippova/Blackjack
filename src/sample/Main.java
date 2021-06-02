@@ -158,7 +158,7 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Scene scene = new Scene(createContent());
         primaryStage.setScene(scene);
         primaryStage.setWidth(800);
