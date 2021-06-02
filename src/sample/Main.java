@@ -145,10 +145,10 @@ public class Main extends Application {
         int playerScore = player.score.get();
         if (dealerScore == 21 || playerScore > 21 || dealerScore == playerScore
                 || (dealerScore < 21 && dealerScore > playerScore)) {
-            image = new Image("file:/Users/mariafilippova/Java/Blackjack/src/resources/casino.jpg");
+            image = new Image("file:./src/resources/casino.jpg");
         }
         else {
-            image = new Image("file:/Users/mariafilippova/Java/Blackjack/src/resources/win.jpg");
+            image = new Image("file:./src/resources/win.jpg");
         }
         Pane pane = new Pane();
         pane.getChildren().addAll(new ImageView(image));
