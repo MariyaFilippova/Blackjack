@@ -18,7 +18,6 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import sun.plugin2.message.Message;
 
 
 public class Main extends Application {

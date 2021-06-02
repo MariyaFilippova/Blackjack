@@ -2,6 +2,9 @@ package sample;
 
 import javafx.scene.image.Image;
 
+import java.io.File;
+import java.net.MalformedURLException;
+
 public class Card {
     Suit suit;
     Type type;
@@ -26,8 +29,9 @@ public class Card {
         }
     }
 
-    static public String getImagePath(Suit suit, Type type) {
-        return "file:/Users/mariafilippova/Java/Blackjack/src/resources/" + type.type + suit.value + ".gif";
+    static public String getImagePath(Suit suit, Type type) throws MalformedURLException {
+        File file = new File("./src/resources/" + type.type + suit.value + ".gif");
+        return file.toURI().toURL().toString();
     }
 
     Card(Suit suit, Type type, Image image) {
