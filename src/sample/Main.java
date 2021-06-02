@@ -151,7 +151,7 @@ public class Main extends Application {
             image = new Image("file:./src/resources/win.jpg");
         }
         Pane pane = new Pane();
-        pane.getChildren().addAll(new ImageView(image));
+        pane.getChildren().add(new ImageView(image));
         primaryStage.setScene(new Scene(pane));
         primaryStage.show();
     }
