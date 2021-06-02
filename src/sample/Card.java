@@ -27,7 +27,7 @@ public class Card {
     }
 
     static public String getImagePath(Suit suit, Type type) {
-        return "/Users/mariafilippova/Java/Blackjack/src/resources" + type.type + suit.value;
+        return "file:/Users/mariafilippova/Java/Blackjack/src/resources/" + type.type + suit.value + ".gif";
     }
 
     Card(Suit suit, Type type, Image image) {
